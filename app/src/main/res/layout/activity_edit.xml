@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/back"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cottage" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:hint="@string/descHint"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tittle"
+                tools:layout_editor_absoluteX="4dp" />
+
+            <EditText
+                android:id="@+id/tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="@string/tittleHint"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                tools:layout_editor_absoluteX="4dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="@string/priceHint"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                tools:layout_editor_absoluteX="4dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChangeImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ch_btn"
+                android:layout_marginStart="-70dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image"
+                app:layout_constraintStart_toEndOf="@+id/image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddHome"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="35dp"
+        android:text="@string/addBtn"
+        android:textColor="@color/white"
+        android:background="@color/addHomeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:layout_editor_absoluteX="139dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Real estate</string>
+    <string name="tittleHint">Адрес:</string>
+    <string name="descHint">Описание:</string>
+    <string name="priceHint">Цена:</string>
+    <string name="addBtn">Add Home</string>
+</resources>
